@@ -7,12 +7,8 @@ hr {
   padding: 0.5px
 }
 
-.boxrow {
-
-}
-
-.box {
-  transition: all 0.5s;
+.collapsible.box {
+  transition: all 0.1s;
   padding: 6px;
   border: solid 3px #d799f2;
   background: #d799f2;
@@ -20,22 +16,22 @@ hr {
   color: white;
 }
 
-.box a {
-  color: white;
-}
-
-.box:hover {
-  transition: all 0.5s;
+.active.collapsible.box, .collapsible.box:hover {
+  transition: all 0.1s;
   background: #fff;
   color: black
 }
 
-.box:hover a {
-  transition: all 0.5s;
-  color: black;
+.contentMain {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.75s;
+  overflow-y: scroll;
 }
 
-.content {
+.contentBox {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
@@ -46,16 +42,26 @@ hr {
 .collapsible {
   transition: all 0.1s;
   background: #6e1296;
+  border: solid 3px #6e1296;
   color: #fff;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
 }
 
 .active, .collapsible:hover {
+  transition: all 0.1s;
   background: #9d3cc7;
+}
+
+.downmenu {
+  position: fixed;
+  bottom: 0;
+  background: #3b0752;
+  width: 100%;
+  color: white;
+  font-size: 10pt;
 }
